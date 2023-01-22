@@ -17,7 +17,7 @@ function App() {
   // function x() {
   //   console.log('red')
   // }
-  const [mainColor, setmainColor, setTheme, toggleTheme] = useTheme();
+  const [mainColor, setmainColor, setTheme, toggleTheme ,deleteProperty] = useTheme();
 
 
   return (
@@ -25,6 +25,9 @@ function App() {
       {/* <header className="App-header"> */}
       <div className='page'>
         <div className='colors'>
+          <div className='colorDiv' style={{ 'background': 'chartreuse' }} onClick={(e) => { deleteProperty(e,'background') }}>
+            <p>delete Property css</p>
+          </div>
           <div className='colorDiv' style={{ 'background': 'red' }} onClick={(e) => { setTheme('red') }}></div>
           <div className='colorDiv' style={{ 'background': 'blue' }} onClick={(e) => { setTheme('blue')}}></div>
           <div className='colorDiv' style={{ 'background': 'green' }} onClick={(e) => { setTheme('green') }}></div>

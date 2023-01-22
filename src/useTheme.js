@@ -34,6 +34,8 @@ export default function useTheme() {
             setmainColor(light);
         }
     }
-
-    return [mainColor, setmainColor, setTheme, toggleTheme]
+    const deleteProperty = (ele, proName) => {
+        ele.target.style.removeProperty(proName);
+    }
+    return [mainColor, setmainColor, setTheme, toggleTheme, deleteProperty]
 }
